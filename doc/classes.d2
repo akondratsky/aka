@@ -1,0 +1,27 @@
+Workspace {
+  explanation: |md
+    contains values which should be applied
+    - maven
+    - npmrc
+    - ssh
+  |
+  mavenSettings
+  npmrc
+  sshConfig
+}
+
+WorkspaceManager {
+  explanation: |md
+    CRUD for workspaces by their name
+  |
+}
+
+WorkspaceIniRepository {
+  explanation: |md
+    Load workspace from Ini file by name
+  |
+}
+
+WorkspaceManager -> WorkspaceIniRepository
+WorkspaceManager -> Workspace
+WorkspaceIniRepository -> Workspace
