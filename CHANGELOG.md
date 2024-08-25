@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/akondratsky/aka/compare/v1.0.0...v1.0.1) (2024-08-25)
+
+
+### Bug Fixes
+
+* fix README.md ([f1bfe9f](https://github.com/akondratsky/aka/commit/f1bfe9fcf2a4c124a18ade47526acc185a29b770))
+
 ## 1.0.0 (2024-08-25)
 
 
