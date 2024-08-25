@@ -2,9 +2,9 @@
 
 aka-workspace is a minimalistic utility tool that provides switching between different "workspaces" with re-configuration:
 
-- NPM repositories
-- Maven repositories
-- GitHub accounts
+- NPM in `~/.npmrc`
+- Maven in `~/.m2/settins.xml`
+- SSH settings in `~/.ssh/config`
 
 ## How to use
 
