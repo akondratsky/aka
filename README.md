@@ -1,24 +1,28 @@
 # aka-workspace AKA aka
 
-## What it is
-
 aka-workspace is a minimalistic utility tool that provides switching between different "workspaces" with re-configuration:
 
 - NPM repositories
 - Maven repositories
 - GitHub accounts
 
-## Commands
+## How to use
+
+Install:
+
+```sh
+npm i -g aka-workspace
+```
 
 aka-workspace is created with [commander](https://www.npmjs.com/package/commander), use `--help` option to read about commands.
 
 ```sh
-aka workspace create [workspace-name] # create TOML file
-aka workspace delete [workspace-name] # delete TOML file
-aka workspace path [workspace-name] # useful to run with your editor, for example: nano $(aka workspace path some-name)
+aka workspace create <workspace-name> # create TOML file
+aka workspace delete <workspace-name> # delete TOML file
+aka workspace path <workspace-name> # useful to run with your editor, for example: nano $(aka workspace path some-name)
 aka workspace list # returns list of available workspaces
 aka current # prints name of the current workspace name
-aka [workspace-name] # switches to workspace with current name
+aka <workspace-name> # switches to workspace with current name
 ```
 
 ## How configuration looks like and how it is applied
@@ -39,7 +43,10 @@ mavenSettings = """
 """
 ```
 
-All the fields are optional. If the field is not presented, the correspondent file will stay untouched when switching to the workspace.
+Aka rewrites the configuration files with the content from workspace configuration.
+
+All the fields are optional. If the field is not presented, the correspondent file (ssh config, npmrc or maven settings) will stay untouched when switching to the workspace.
+
 
 ## Anything else?
 
