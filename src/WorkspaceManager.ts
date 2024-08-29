@@ -3,9 +3,9 @@ import { mkdirSync, existsSync, writeFileSync, unlinkSync, readdirSync, readFile
 import { homedir } from 'node:os';
 import { parse, stringify } from 'smol-toml';
 import { workspaceTemplate } from './workspaceTemplate.js';
-import { SshConfig } from './SshConfig.js';
-import { NpmrcConfig } from './NpmrcConfig.js';
-import { MavenSettingsConfig } from './MavenSettingsConfig.js';
+import { SshConfig } from './configs/SshConfig.js';
+import { NpmrcConfig } from './configs/NpmrcConfig.js';
+import { MavenSettingsConfig } from './configs/MavenSettingsConfig.js';
 
 type CurrentWorkspaceConfig = {
   currentWorkspace: string;
@@ -43,15 +43,10 @@ export class WorkspaceManager {
     }
     const content = readFileSync(workspaceConfigPath, 'utf-8');
     const { mavenSettings, npmrc, sshConfig } = parse(content) as WorkspaceConfig;
-    if (sshConfig) {
-      new SshConfig().write(sshConfig);
-    }
-    if (npmrc) {
-      new NpmrcConfig().write(npmrc);
-    }
-    if (mavenSettings) {
-      new MavenSettingsConfig().write(mavenSettings);
-    }
+
+    new SshConfig().apply(sshConfig);
+    new NpmrcConfig().apply(npmrc);
+    new MavenSettingsConfig().apply(mavenSettings);
 
     this.setCurrentWorkspace(workspaceName);
     console.log(`Workspace loaded: ${workspaceName}`);
