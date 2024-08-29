@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/akondratsky/aka/compare/v1.0.1...v1.0.2) (2024-08-29)
+
+
+### Bug Fixes
+
+* **MavenSettingsConfig:** if maven settings config is an empty line, delete the settings.xml file ([56a154f](https://github.com/akondratsky/aka/commit/56a154f23d59dd54f8c996cdb1bb61e7bbc1d163))
+
 ## [1.0.1](https://github.com/akondratsky/aka/compare/v1.0.0...v1.0.1) (2024-08-25)
 
 
