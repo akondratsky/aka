@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { homedir } from 'node:os';
-import { AbstractConfig } from '../AbstractConfig.js';
+import { AbstractConfig } from './AbstractConfig.js';
 
 export class MavenSettingsConfig extends AbstractConfig {
   constructor() {

@@ -1,10 +1,10 @@
 import { join } from 'node:path';
 import { homedir } from 'node:os';
-import { AbstractConfig } from '../AbstractConfig.js';
+import { AbstractConfig } from './AbstractConfig.js';
 
-export class SshConfig extends AbstractConfig {
+export class NpmrcConfig extends AbstractConfig {
   constructor() {
-    super(join(homedir(), '.ssh', 'config'));
+    super(join(homedir(), '.npmrc'));
   }
 
   public apply(content?: string): void {

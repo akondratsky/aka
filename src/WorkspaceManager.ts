@@ -3,9 +3,9 @@ import { mkdirSync, existsSync, writeFileSync, unlinkSync, readdirSync, readFile
 import { homedir } from 'node:os';
 import { parse, stringify } from 'smol-toml';
 import { workspaceTemplate } from './workspaceTemplate.js';
-import { SshConfig } from './configs/SshConfig.js';
-import { NpmrcConfig } from './configs/NpmrcConfig.js';
-import { MavenSettingsConfig } from './configs/MavenSettingsConfig.js';
+import { SshConfig } from './SshConfig.js';
+import { NpmrcConfig } from './NpmrcConfig.js';
+import { MavenSettingsConfig } from './MavenSettingsConfig.js';
 
 type CurrentWorkspaceConfig = {
   currentWorkspace: string;
