@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/akondratsky/aka/compare/v1.0.2...v1.0.3) (2024-08-29)
+
+
+### Bug Fixes
+
+* broken build and published version - never publish untested packages even if only you use it... ([cfaba62](https://github.com/akondratsky/aka/commit/cfaba62d6ee89b93b0622e155dc6b48406c175de))
+
 ## [1.0.2](https://github.com/akondratsky/aka/compare/v1.0.1...v1.0.2) (2024-08-29)
 
 
