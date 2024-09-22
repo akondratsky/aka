@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/akondratsky/aka/compare/v1.0.3...v1.0.4) (2024-09-22)
+
+
+### Bug Fixes
+
+* **abstractconfig:** fix the issue with deleteing absent settings.xml ([93950bf](https://github.com/akondratsky/aka/commit/93950bf933bb5bcba528be8bcdd35f704e2d0421))
+* fixed issue with Maven configuration ([728c0cf](https://github.com/akondratsky/aka/commit/728c0cfae00b7b3c1694429afc454e7fd18c716a))
+
 ## [1.0.3](https://github.com/akondratsky/aka/compare/v1.0.2...v1.0.3) (2024-08-29)
 
 
