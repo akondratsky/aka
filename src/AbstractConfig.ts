@@ -1,4 +1,4 @@
-import { writeFileSync, rmSync } from 'node:fs';
+import { writeFileSync, rmSync, existsSync } from 'node:fs';
 
 export abstract class AbstractConfig {
   private readonly path: string;
@@ -14,6 +14,8 @@ export abstract class AbstractConfig {
   }
 
   public delete(): void {
-    rmSync(this.path);
+    if (existsSync(this.path)) {
+      rmSync(this.path);
+    }
   }
 }
