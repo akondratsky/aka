@@ -10,6 +10,7 @@ export class MavenSettingsConfig extends AbstractConfig {
   public apply(content?: string): void {
     if (content === '') {
       this.delete();
+      return;
     }
     if (typeof content === 'string') {
       this.write(content);

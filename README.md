@@ -3,7 +3,7 @@
 aka-workspace is a minimalistic utility tool that provides switching between different "workspaces" with re-configuration:
 
 - NPM in `~/.npmrc`
-- Maven in `~/.m2/settins.xml`
+- Maven in `~/.m2/settings.xml`
 - SSH settings in `~/.ssh/config`
 
 ## How to use
@@ -46,6 +46,8 @@ mavenSettings = """
 Aka rewrites the configuration files with the content from workspace configuration.
 
 All the fields are optional. If the field is not presented, the correspondent file (ssh config, npmrc or maven settings) will stay untouched when switching to the workspace.
+
+If field is an empty string, the file will be rewritten (NPM, SSH) or deleted (Maven's `settings.xml`).
 
 
 ## Anything else?

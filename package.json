@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/akondratsky/aka#readme",
   "scripts": {
-    "test": "vitest run",
+    "test": "vitest run --silent",
     "test:watch": "vitest dev",
     "lint": "bun run lint:tsc && eslint src",
     "lint:tsc": "tsc --project tsconfig.test.json --noEmit && tsc --project tsconfig.lib.json --noEmit",
