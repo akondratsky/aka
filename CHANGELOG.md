@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/akondratsky/aka/compare/v1.0.4...v1.1.0) (2024-11-23)
+
+
+### Features
+
+* **ssh:** automatically clear SSH agent identities with "ssh-add -D" on workspace change ([6441d46](https://github.com/akondratsky/aka/commit/6441d46fe24dd5200f0691bf3e76e417b51592ed))
+
 ## [1.0.4](https://github.com/akondratsky/aka/compare/v1.0.3...v1.0.4) (2024-09-22)
 
 
